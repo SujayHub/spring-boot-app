@@ -1,0 +1,30 @@
+#hibarnate logging
+logging:
+  level:
+    org:
+      hibernate:
+        stat: debug
+        type: trace
+#H2 Console
+spring:
+  h2:
+    console:
+      enabled: true
+      
+#Jpa Show Quries and stats
+  jpa:
+    properties:
+      hibernate:
+        format_sql: true
+        generate_statistics: false
+    show-sql: true
+    
+#Spring Actuator Settings
+
+management:
+  endpoint:
+    shutdown.enabled: true
+  endpoints:
+    web.exposure.include: "*"
+    
+
