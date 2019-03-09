@@ -17,6 +17,17 @@ pipeline {
                 sh 'mvn -version'
             }
         }
+
+        stage('Build') {
+
+        	buildInfo = rtMaven.run pom: 'pom.xml', goals: 'clean install'
+    	}
+        
+        stage('No-op') {
+            steps {
+                sh 'ls'
+            }
+        }
         
         stage('No-op') {
             steps {
