@@ -20,20 +20,30 @@ pipeline {
 
         stage('Build') {
 
-        	mvn clean install
+        	sh 'mvn clean install'
+        }
+
+        stage('Test') {
+
+        	sh 'mvn test'
+        }
+
+        stage('Package') {
+
+        	sh 'mvn package'
         }
         
-        stage('No-op') {
+        stage('Deploy') {
+
+        	echo 'Here we will deploy'
+        }
+        
+        stage('Directory') {
             steps {
                 sh 'ls'
             }
         }
         
-        stage('No-op') {
-            steps {
-                sh 'ls'
-            }
-        }
         
     }
     
