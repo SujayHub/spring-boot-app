@@ -49,7 +49,11 @@ pipeline {
         
         stage('Deploy') {
 
-        	echo 'Here we will deploy'
+        	steps{
+
+        	echo 'Deploying...'
+
+        	}
         }
         
         stage('Directory') {
