@@ -13,7 +13,6 @@ pipeline {
         
         stage('Setup') {
             steps {
-                git 'https://github.com/SujayHub/spring-boot-app.git'
                 sh 'java -version'
                 sh 'mvn -version'
             }
