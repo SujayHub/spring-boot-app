@@ -20,8 +20,8 @@ pipeline {
 
         stage('Build') {
 
-        	buildInfo = rtMaven.run pom: 'pom.xml', goals: 'clean install'
-    	}
+        	mvn clean install
+        }
         
         stage('No-op') {
             steps {
