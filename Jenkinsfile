@@ -51,7 +51,7 @@ pipeline {
 
         	steps{
 
-        	echo 'Deploying package...'
+        	echo 'Deploying package as standalone jar...'
 
         	}
         }
