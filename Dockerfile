@@ -4,4 +4,4 @@ ARG DEPENDENCY=target/dependency
 COPY ${DEPENDENCY}/BOOT-INF/lib /app/lib
 COPY ${DEPENDENCY}/META-INF /app/META-INF
 COPY ${DEPENDENCY}/BOOT-INF/classes /app
-ENTRYPOINT ["java","-cp","app:app/lib/*","H2PersistanceApplication.Application"]
+ENTRYPOINT ["java","-cp","app:app/lib/*","corp.sam.jpa.h2.h2persistance.H2PersistanceApplication"]
