@@ -51,7 +51,7 @@ pipeline {
 
         	steps{
 
-        	echo 'Deploying...'
+        	echo 'Deploying package...'
 
         	}
         }
